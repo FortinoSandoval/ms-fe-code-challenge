@@ -1,0 +1,17 @@
+<div class="uk-container uk-padding-small">
+  <div class="uk-grid" *ngIf="loaded">
+    <div class="uk-width-1-3@m uk-width-1-1@s">
+      <app-tweet-card [tweet]="tweet" *ngFor="let tweet of users[0].tweets"></app-tweet-card>
+    </div>
+    <div class="uk-width-1-3@m uk-width-1-1@s">
+      <app-tweet-card [tweet]="tweet" *ngFor="let tweet of users[1].tweets"></app-tweet-card>
+    </div>
+    <div class="uk-width-1-3@m uk-width-1-1@s">
+      <app-tweet-card [tweet]="tweet" *ngFor="let tweet of users[2].tweets"></app-tweet-card>
+    </div>
+  </div>
+  <div *ngIf="!loaded">
+    <h2 class="uk-padding-large">Loading...</h2>
+  </div>
+</div>
+<app-edit-layout (reloadTweets)="emitEvent($event)"></app-edit-layout>

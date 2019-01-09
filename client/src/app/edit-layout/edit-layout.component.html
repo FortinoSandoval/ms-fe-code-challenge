@@ -1,0 +1,46 @@
+<button uk-toggle="target: #edit-layout" type="button" class="edit-layout"><span uk-icon="file-edit"></span></button>
+
+<!-- This is the modal -->
+<div id="edit-layout" uk-modal>
+  <div class="uk-modal-dialog">
+    <div class="uk-modal-header">
+      <h2 class="uk-modal-title">Edit Layout</h2>
+    </div>
+    <div class="uk-modal-body" uk-overflow-auto>
+      <section>
+        <h3>Main Config</h3>
+        <p>Select Color: </p>
+        <span class="white" (click)="changeColor('light')"></span>
+        <span class="black" (click)="changeColor('dark')"></span>
+        <span class="red" (click)="changeColor('red')"></span>
+        <p>Select Order: </p>
+        <div class="box-container">
+          <bs-sortable [(ngModel)]="userPriority" itemClass="sortable-item" wrapperClass="sortable-wrapper"
+            (ngModelChange)="orderChange($event)"></bs-sortable>
+        </div>
+        <p>Number of tweets: </p>
+        <div class="box-container">
+          <button type="button" class="uk-button-default tweets-btn" (click)="setTweets(30)">30</button>
+          <button type="button" class="uk-button-default tweets-btn" (click)="setTweets(20)">20</button>
+          <button type="button" class="uk-button-default tweets-btn" (click)="setTweets(15)">15</button>
+          <button type="button" class="uk-button-default tweets-btn" (click)="setTweets(10)">10</button>
+          <button type="button" class="uk-button-default tweets-btn" (click)="setTweets(5)">5</button>
+        </div>
+      </section>
+      <!-- <section class="uk-margin-top">
+        <h3>Individual Config</h3>
+        Select User:
+        <select name="tweet" (change)="change()" [(ngModel)]="selectedUser" class="selectedUser">
+          <option *ngFor="let user of users">{{ user.name }}</option>
+        </select>
+        <div *ngIf="selectedUser" class="uk-margin-top">
+          Hola
+        </div>
+      </section> -->
+    </div>
+    <div class="uk-modal-footer uk-text-right">
+      <button class="uk-button uk-button-default" type="button" (click)="reset()">Reset</button>
+      <button class="uk-button uk-button-default uk-modal-close" type="button">Ok</button>
+    </div>
+  </div>
+</div>

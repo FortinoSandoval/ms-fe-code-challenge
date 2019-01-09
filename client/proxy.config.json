@@ -1,0 +1,8 @@
+{
+  "/1.1/*": {
+    "target": "http://localhost:7890/",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

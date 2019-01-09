@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/uikit/dist/css/uikit.min.css');
+
+.dark {
+  background-color: #2e2e2e;
+  .uk-card-header, .uk-modal-header {
+    background-color: #312727;
+    border-bottom: 1px solid #242424;
+    .uk-card-title, .uk-modal-title {
+      color: white;
+    }
+  }
+  .uk-card-body, .uk-modal-body {
+    background-color: #333030;
+    p, h3, & {
+      color: #c4c4c4;
+    }
+  
+  }
+  .uk-card-footer, .uk-modal-footer {
+    background-color: #312727;
+    border-top: 1px solid #242424;
+    a {
+      color: #d1c8c8;
+    }
+  }
+  .uk-button-default {
+    color: #d1c8c8;
+  }
+}
+
+.red {
+  background-color: #a7e5e0;
+  .uk-card-header, .uk-modal-header {
+    background-color: #bb8f5b;
+    border-bottom: 1px solid #008eb3;
+    .uk-text-meta {
+      a {
+        color: #333030;
+      }
+    }
+  }
+  .uk-card-body, .uk-modal-body {
+    background-color: #e4dbbe;
+  }
+  .uk-card-footer, .uk-modal-footer {
+    background-color: #bb8f5b;
+    border-top: 1px solid #008eb3;
+  }
+}
+
+.sortable-wrapper {
+  width: 100%;
+  
+  .sortable-item {
+    padding: 6px 12px;
+    margin-right: 1%;
+    width: 25%;
+    font-size: 14px;
+    text-align: center;
+    cursor: grab;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border-color: #adadad;
+    display: inline-block;
+  }
+  
+  .sortable-item-active {
+    background-color: #e6e6e6;
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+  }
+}

@@ -1,0 +1,21 @@
+<div class="uk-card uk-card-default uk-width-9-10 uk-margin-bottom">
+  <div class="uk-card-header">
+    <div class="uk-grid-small uk-flex-middle" uk-grid>
+      <div class="uk-width-auto">
+        <img class="uk-border-circle" width="40" height="40" src="{{ tweet.user.profile_image_url }}">
+      </div>
+      <div class="uk-width-expand">
+        <h3 class="uk-card-title uk-margin-remove-bottom">{{ tweet.user.name }}</h3>
+        <p class="uk-text-meta uk-margin-remove-top"><a href="{{ 'https://twitter.com/' + tweet.user.screen_name }}" target="_blank">@{{ tweet.user.screen_name }}</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="uk-card-body">
+    <p class="uk-text-meta uk-margin-remove"><time>{{ tweet.created_at | date }}</time></p>
+    <p>{{ tweet.text }}</p>
+  </div>
+  <div class="uk-card-footer">
+    <span uk-icon="heart"></span> {{ tweet.favorite_count }}
+    <a target="_blank" href="{{ getUrl(tweet) }}" class="uk-button uk-button-text uk-position-bottom-right">Link to tweet</a>
+  </div>
+</div>
