@@ -16,7 +16,7 @@ export class ConfigService {
       this.config = JSON.parse(localStorage.getItem('config'));
     } else {
       this.config = {
-        order: ['Make School', 'Hacker News', 'Y Combinator'],
+        order: ['MakeSchool', 'newsycombinator', 'ycombinator'],
         class: [
           { className: 'light', active: true },
           { className: 'dark', active: false },
